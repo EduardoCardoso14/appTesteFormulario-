@@ -7,6 +7,15 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
       },
+      ngcdoview: {
+        borderWidth: 3,
+        width: 300,
+        height: 100,
+        position: 'absolute',
+        top: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
       img: {
         width: 300,
         height: 200,
@@ -41,6 +50,8 @@ export default StyleSheet.create({
       padding: 5,
       margin: 10,
     },
-    butao:{
+    imgpequena:{
+      width: 200,
+      height: 100,
     },
 });

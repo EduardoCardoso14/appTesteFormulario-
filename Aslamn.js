@@ -3,11 +3,16 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, View, ImageBackground, TouchableOpacity, Image, TextInput, Button, Alert } from 'react-native';
 import estilo from './style/style.js';
 import Menu from './Menu';
+import { ScrollView } from 'react-native-gesture-handler';
 
 function Aslamn({ navigation }) {
 
+    const numbersa = [];
+    for (let i = 11; i<= 20; i++){
+        numbersa.push(i);
+    }
 
-    const numbers = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10];
+    //const numbers = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10];
    /* const ola = 'amigo?';
     function exec(){
         const ola = 'sim';
@@ -78,9 +83,14 @@ function Aslamn({ navigation }) {
             <View style={estilo.container}>
                 <Button title='bomdia'></Button>
                 <Text> Exemplo de repetição em Reactis Nativos</Text>
-                {numbers.map((number, index) => (
+                <ScrollView>
+                {numbersa.map((number, index) => (
+                    <>
                     <Text key={index}>{number}</Text>
+                    <Image source={require('./assets/spid.gif')} style={estilo.imgpequena}></Image>
+                    </>
                 ))}
+                </ScrollView>
                 <Text></Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={estilo.touchaslamn}>
                     <Text> Clique na imagem (Se for capaz)</Text>
