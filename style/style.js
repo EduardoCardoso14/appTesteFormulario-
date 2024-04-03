@@ -34,4 +34,13 @@ export default StyleSheet.create({
       alignItems: 'center',
       gap: 10,
     }, 
+    areaTexto:{
+      borderWidth: 2,
+      height: 50,
+      width: 250,
+      padding: 5,
+      margin: 10,
+    },
+    butao:{
+    },
 });

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Aslamn from './Aslamn';
+import TelaTres from './TelaTres';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,12 @@ function Navigation() {
         <Stack.Screen name="Aslamn" component={Aslamn}
         options={{
           title: 'Aslamn Teste ',
+          headerTintColor: 'black',
+          headerStyle: { backgroundColor: 'white' }
+        }}  />
+         <Stack.Screen name="TelaTres" component={TelaTres}
+        options={{
+          title: 'Telnha do test ',
           headerTintColor: 'black',
           headerStyle: { backgroundColor: 'white' }
         }}  />

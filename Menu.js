@@ -13,6 +13,9 @@ function Menu() {
             <TouchableOpacity onPress={() => navigation.navigate('Aslamn')}>
                 <Image source={require('./assets/iconcereb.png')} style={estilo.iconmenu}></Image>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('TelaTres')}>
+                <Image source={require('./assets/bone.png')} style={estilo.iconmenu}></Image>
+            </TouchableOpacity>
         </View>
     );
 }
