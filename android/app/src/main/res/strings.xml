@@ -1,0 +1,7 @@
+<!-- ./android/app/src/main/res/values/strings.xml -->
+<resources>
+    <!-- NOTE: 
+      This will be the name visible in the Android Home screen
+    -->
+    <string name="app_name">APPLICATION_NAME/APPLICATION_DISPLAY_NAME</string>
+</resources>

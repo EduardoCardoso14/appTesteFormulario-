@@ -17,8 +17,8 @@ export default StyleSheet.create({
         alignItems: 'center',
       },
       img: {
-        width: 300,
-        height: 200,
+        width: 200,
+        height: 100,
       },
       iconmenu: {
         width: 30,

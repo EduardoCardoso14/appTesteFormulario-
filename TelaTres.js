@@ -4,20 +4,27 @@ import { Text, View, ImageBackground, Image, TouchableOpacity, TextInput, Button
 import estilo from './style/style.js';
 import Menu from './Menu';
 
-function TelaTres({ navigation }) {
-    const [select, setSelected] = useState(0);
+function TelaTres({ route, navigation }) {
     const [v1, setV1] = useState('');
     const [v2, setV2] = useState('');
+    const [v3, setV3] = useState('');
+    const [nome, setNome] = useState('');
+    const [idade, setIdade] = useState('');
+    const [endereco, setEndereco] = useState('');
 
-    const handlePress = () => {
+    const bomdia = 'bom dia duplo';
+
+    const copiar = () => {
+        setNome(v1);
+        setIdade(v2);
+        setEndereco(v3);
         Alert.alert(
-            'Login:',
-            'Senha:',
+            '- Dados -',
+            'Nome: '+v1+
+            '  - Idade: '+v2+
+            '  - Endereço: '+v3,
             [
-                {
-                    text: 'Faz dnv', onPress: () =>
-                        navigation.navigate("TelaTres")
-                },
+                { text: 'Faz Dnv', onPress: () => navigation.navigate("TelaTres") },
             ]
         );
     }
@@ -25,8 +32,9 @@ function TelaTres({ navigation }) {
     return (
         <View style={estilo.container}>
             <View style={estilo.ngcdoview}>
-                <Text>Login: {v1}</Text>
-                <Text>Senha: {v2}</Text>
+                <Text>Nome: {nome}</Text>
+                <Text>Idade: {idade}</Text>
+                <Text>Endereço: {endereco}</Text>
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('Home')} style={estilo.touchaslamn}>
                 <Text> Clique na imagem (Se for capaz) </Text>
@@ -36,7 +44,7 @@ function TelaTres({ navigation }) {
                 <TextInput
                     onChangeText={setV1}
                     underlineColorAndroid="transparent"
-                    placeholder='Login'
+                    placeholder='Nome'
                     placeholderTextColor="gray"
                     numberOfLines={10}
                     multiline={true}></TextInput>
@@ -45,12 +53,22 @@ function TelaTres({ navigation }) {
                 <TextInput
                     onChangeText={setV2}
                     underlineColorAndroid="transparent"
-                    placeholder='Senha'
+                    placeholder='Idade'
                     placeholderTextColor="gray"
                     numberOfLines={10}
                     multiline={true}></TextInput>
             </View>
-            <Button title='bomdia' onPress={handlePress}></Button>
+            <View style={estilo.areaTexto}>
+                <TextInput
+                    onChangeText={setV3}
+                    underlineColorAndroid="transparent"
+                    placeholder='Endereço'
+                    placeholderTextColor="gray"
+                    numberOfLines={10}
+                    multiline={true}></TextInput>
+            </View>
+            <Button title='Copiar' onPress={copiar}></Button>
+            <Button title='oi' onPress={() => navigation.navigate('Aslamn',{bomdia, nome, idade, endereco})}></Button>
             <Menu></Menu>
             <StatusBar style="auto" />
         </View>

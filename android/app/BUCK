@@ -1,0 +1,16 @@
+
+# ./android/app/BUCK
+
+# find 'android_build_config' and 'android_resource'
+# ANDROID_PACKAGE_NAME = com.mycompany.whaterver.app
+
+android_build_config(
+    name = "build_config",
+    package = "ANDROID_PACKAGE_NAME",
+)
+
+android_resource(
+    name = "res",
+    package = "ANDROID_PACKAGE_NAME",
+    res = "src/main/res",
+)

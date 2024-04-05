@@ -1,0 +1,20 @@
+# ./android/app/build.gradle
+
+# find 'applicationId' under 'android.defaultConfig'
+# android.defaultConfig.applicationId
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "ANDROID_PACKAGE_NAME"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }

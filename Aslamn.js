@@ -5,12 +5,14 @@ import estilo from './style/style.js';
 import Menu from './Menu';
 import { ScrollView } from 'react-native-gesture-handler';
 
-function Aslamn({ navigation }) {
+function Aslamn({ route, navigation }) {
+    console.log(route.params);
+    const {bomdia, nome, idade, endereco} = route.params; 
 
-    const numbersa = [];
+    /*
     for (let i = 11; i<= 20; i++){
         numbersa.push(i);
-    }
+    }*/
 
     //const numbers = [1, 2, 3 , 4, 5, 6, 7, 8, 9, 10];
    /* const ola = 'amigo?';
@@ -81,19 +83,9 @@ function Aslamn({ navigation }) {
         }*/
         return (
             <View style={estilo.container}>
-                <Button title='bomdia'></Button>
-                <Text> Exemplo de repetição em Reactis Nativos</Text>
-                <ScrollView>
-                {numbersa.map((number, index) => (
-                    <>
-                    <Text key={index}>{number}</Text>
-                    <Image source={require('./assets/spid.gif')} style={estilo.imgpequena}></Image>
-                    </>
-                ))}
-                </ScrollView>
                 <Text></Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={estilo.touchaslamn}>
-                    <Text> Clique na imagem (Se for capaz)</Text>
+                    <Text> Clique na imagem (Se for capaz){bomdia}{nome}{idade}{endereco}</Text>
                     <Image source={require('./assets/spid.gif')} style={estilo.img}></Image>
                     <View style={estilo.areaTexto}>
                         <TextInput

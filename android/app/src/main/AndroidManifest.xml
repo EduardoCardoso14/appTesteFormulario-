@@ -1,0 +1,6 @@
+<!-- ./android/app/src/main/AndroidManifest.xml -->
+<!-- change the value of 'package' -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ANDROID_PACKAGE_NAME">   
+</manifest>
